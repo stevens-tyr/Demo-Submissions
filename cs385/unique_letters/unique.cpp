@@ -1,10 +1,3 @@
-/*******************************************************************************
- * Name        : unique.cpp
- * Author      : Andrew Chen
- * Date        : 2/8/17
- * Description : Determining uniqueness of chars with int as bit vector.
- * Pledge      : I pledge my honor that I have abided by the Stevens Honor System.
- ******************************************************************************/
 #include <iostream>
 #include <cctype>
 #include <string>
