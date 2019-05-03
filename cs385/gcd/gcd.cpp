@@ -17,8 +17,8 @@ int gcd_rec(int num1, int num2) {
     int larger;
     int smaller;
 
-    if (num1 > num2) {		// This section of code just makes sure that the
-        larger = num1;		// 2 numbers are in the correct order for my helper function
+    if (num1 > num2) {
+        larger = num1;
         smaller = num2;
     }
     else {
@@ -59,7 +59,7 @@ int main(int argc, char * const argv[]) {
         cerr << "Error: The first argument is not a valid integer." << endl;
         return 1;
     }
-    iss.clear();	// clears the error assignment, not the iss itself.
+    iss.clear();
 
     iss.str(argv[2]);
     if (! (iss >> n) ) {

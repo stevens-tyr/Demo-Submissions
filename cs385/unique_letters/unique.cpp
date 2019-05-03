@@ -6,20 +6,18 @@
 using namespace std;
 
 bool is_all_lowercase(const string &s) {
-    // returns true if the argument consists of all lowercase characters. Returns false if otherwise
-    for (size_t i = 0; i < s.length(); i++) {	// I used "size_t" because I found that that
-        if (!(islower(s.at(i)))) { // was the solution to a signed/unsigned error
-            return false;        // that i had. According to:  http://www.cplusplus.com/reference/cstring/size_t/
-        }			// it is used for sizes when you use you use a 'sizeof' method in the standard library
+    for (size_t i = 0; i < s.length(); i++) {
+        if (!(islower(s.at(i)))) { 
+            return false;
+        }
         if (isdigit(s.at(i))) {
-            return false;	// According to: http://stackoverflow.com/questions/1089176/is-size-t-always-unsigned
-        }		        // size_t is unsigned because the size of anything can't be negative
+            return false;
+        }
     }
     return true;
 }
 
 bool all_unique_letters(const string &s) {
-    // returns true if the argument contains all unique characters. Returns false if otherwise
     int bitmap = 0;
     for (size_t i = 0; i < s.length(); ++i) {
         int currChar = s.at(i) - 'a';
@@ -33,7 +31,6 @@ bool all_unique_letters(const string &s) {
 }
 
 int main(int argc, char * const argv[]) {
-    // reads and parses arguments to return the correct output
     if (argc != 2) {
         cerr << "Usage: " << argv[0] << " <string>" << endl;
         return 1;
