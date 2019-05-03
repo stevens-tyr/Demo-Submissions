@@ -33,7 +33,7 @@ bool all_unique_letters(const string &s) {
 int main(int argc, char * const argv[]) {
     if (argc != 2) {
         cerr << "Usage: " << argv[0] << " <string>" << endl;
-        return 1;
+        return 0;
     }
 
     string input = argv[1];
@@ -51,12 +51,12 @@ int main(int argc, char * const argv[]) {
     else {
         if (!is_all_lowercase(input)) {
             cerr << "Error: String must contain only lowercase letters." << endl;
-            return 1;
+            return 0;
         }
 
         if (!all_unique_letters(input)) {
             cerr << "Duplicate letters found." << endl;
-            return 1;
+            return 0;
         }
     }
     return 0;
